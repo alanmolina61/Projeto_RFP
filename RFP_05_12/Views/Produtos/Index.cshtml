@@ -1,0 +1,25 @@
+﻿@model IEnumerable<RFP_05_12.Models.Produto>
+
+@{
+    ViewData["Title"] = "Request for Proposal - Produtos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="row" style="list-style-type: none; margin-top: 200px; margin-bottom: 2px; margin-left:100px">
+    <div class="col-6 col-md-4"><li><a asp-area="" asp-controller="Produtos" asp-action="AdicionarArquivo"><img src="~/images/add.svg" alt="Gera_RFP" width="100"style="left:100px"></a></li></div>
+    <div class="col-6 col-md-4"><li><a asp-area="" asp-controller="Produtos" asp-action="FindAll"><img src="~/images/search.svg" alt="Busca_RFP" width="100"style="left:100px"></a></li></div>
+    <div class="col-6 col-md-4"><li><a asp-area="" asp-controller="Produtos" asp-action=""><img src="~/images/configuracao.svg" alt="Tools_RFP" width="100"style="left:100px"></a></li></div>
+</div>
+
+<div class="row" style="list-style-type: none; margin-bottom: 300px; margin-left: 110px; margin-top:5px">
+
+    <div class="col-6 col-md-4"><p>Gerar RFP</p></div>
+    <div class="col-6 col-md-4"><p>Lista de RFPs</p></div>
+    <div class="col-6 col-md-4" style="left:7px"><p>Ferramentas</p></div>
+
+</div>

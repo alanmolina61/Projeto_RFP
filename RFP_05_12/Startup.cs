@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using RFP_05_12.Models;
+using RFP_05_12.Models.Services;
 
 namespace RFP_05_12
 {
@@ -33,6 +36,15 @@ namespace RFP_05_12
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<ProdutosContext>(options =>
+                    options.UseMySql(Configuration.GetConnectionString("ProdutosContext"), builder =>
+                    builder.MigrationsAssembly("RFP_05_12")));
+            services.AddScoped<ProdutoService>();
+
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

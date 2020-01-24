@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+
+<!--<iframe id="content" width="1200px" height="700px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=zTuuOHmV1E-t2rQuFJXVWqt32A4eicRKoR9PACuUYPdURFhFRlZSMUFSNUNBRjdRRTBZME5ZSkExWS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh; margin-bottom: 10px" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>-->
+
+@section Scripts
+    {
+    <script>
+        $(document).on('click', '#process2', function () {
+            $("#content").load("content.html #process", function () {
+                $(window).scrollTop(0);
+            });
+        });
+    </script>
+}
+<style>
+    .btnColor {
+        background-color: #01DFD7;
+    }
+</style>
+    <form>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">
+                1.O produto em questão é importado?
+            </label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Sim</option>
+                <option>Não</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">2.Informe qual  origem do fornecedor</label>
+            <select class="form-control" id="origemFornecedor">
+                <option>Escolha a origem</option>
+                <option>Negócio próprio (Own Business)</option>
+                <option>Outra empresa Siemens (Intra Company Business)</option>
+                <option>Empresa terceira (Inter Company Business)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">
+                3.Informe o produto em questão
+            </label>
+            <select class="form-control" id="produto">
+                <option>Escolha a produto</option>
+                <option>Transformador</option>
+                <option>Isolador</option>
+                <option>Chave seccionadora</option>
+            </select>
+        </div>
+
+    </form>
+    <button type="submit" class="btn btn-success"> Enviar</button>
+

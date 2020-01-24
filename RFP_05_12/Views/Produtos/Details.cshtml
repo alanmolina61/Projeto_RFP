@@ -1,0 +1,48 @@
+﻿@model RFP_05_12.Models.Produto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Importado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Importado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Revenda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Revenda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Publico)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Publico)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Especs)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Especs)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
